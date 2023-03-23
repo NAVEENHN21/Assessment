@@ -133,7 +133,7 @@ public class CompanyLocker {
 				}
 	}
 	
-	// This method allows user to delete a file from the directory
+	// method allows user to delete a file from the directory
 	public static void deletefiles() {
 		String filename;
 		File file=new File("C:\\Java FSD\\Assessment\\Phase_1_Assessment\\src\\Filedirectory");
