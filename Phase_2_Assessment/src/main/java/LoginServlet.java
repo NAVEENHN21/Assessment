@@ -27,27 +27,8 @@ public class LoginServlet extends HttpServlet {
    
 	public static final String USERNAME="admin";
     public static final String PASSWORD="admin";
-
-//	    
-//	private DataSource dataSource; 
-//	private Connection connection;// Injected by the container
-//	    
-//    public void init(ServletConfig config) {
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			ServletContext context=config.getServletContext();
-//			String dburl = context.getInitParameter("dburl");
-//			String dbuser = context.getInitParameter("dbuser");
-//			String dbpass = context.getInitParameter("dbpass");
-//			connection = DriverManager.getConnection(dburl,dbuser,dbpass);
-//		} catch (ClassNotFoundException | SQLException e) {
-//			e.printStackTrace();
-//		}
-//    }
-
     
-	    
-	    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	       
 	    	String username = request.getParameter("username");
 	        String password = request.getParameter("password");
@@ -57,7 +38,7 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("username", username);
 				response.sendRedirect("dashboard.jsp");
 			}else {
-				System.out.println("errorMessage"+"Invalid username or password");
-			}
+				request.setAttribute("errorMessage", "Invalid username or password");
+				request.getRequestDispatcher("error.jsp").forward(request, response);			}
 	    }
 	}

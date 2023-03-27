@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Dashboard - Learner's Academy</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <style>
 ul {
@@ -35,29 +36,31 @@ body {
   font-size: 16px;
 }
 
-#id{
-}
 
 
   </style>
   <body>
     <header>
-      <div id="id" class="logo"><h1>Learner's Academy</h1></div>
+      <div  class="logo"><h1>Welcome to Learner's Academy</h1></div>
       <nav>
         <ul>
           <li><a href="subjects">Subjects</a></li>
-          <li><a href="#">Teachers</a></li>
-          <li><a href="#">Classes</a></li>
-          <li><a href="#">Class-Subject Mapping</a></li>
-          <li><a href="#">Class-Teacher Mapping</a></li>
+          <li><a href="teachers">Teachers</a></li>
+          <li><a href="classes">Classes</a></li>
           <li><a href="students">Students</a></li>
+          <li><a href="classreport">Class-Report</a></li>
           
         </ul>
       </nav>
     </header>
     <div class="container">
-      <h2>Welcome to Learner's Academy</h2>
-      <p>Please select a section from the menu above.</p>
+    
+      <h2>Please select a section from the menu above.</h2>
     </div>  
+    <div>
+     <a href="login.jsp" class="btn btn-info btn-lg" >
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+    </div>
   </body>
 </html>
